@@ -23,3 +23,15 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
+  hello_world_job: 
+    runs-on: ubuntu-latest 
+    name: A job to say hello 
+    steps: 
+    - name: Hello world action step 
+      id: hello 
+      uses: unaihuete-org/hello-world-action@v1 
+      with: 
+        who-to-greet: 'your-name' 
+    - name: Get the output time 
+      run: echo "The time was ${{ steps.hello.outputs.time }}" 
