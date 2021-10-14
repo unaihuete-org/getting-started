@@ -28,7 +28,7 @@ jobs:
     steps: 
     - name: Hello world action step 
       id: hello 
-      uses: unaihuete-org/hello-world-GHaction@v1 
+      uses: unaihuete-org/hello-world-docker-GHaction@v1 
       with: 
         who-to-greet: 'your-name' 
     - name: Get the output time 
